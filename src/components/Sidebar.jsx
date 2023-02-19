@@ -5,7 +5,7 @@ import { Category } from '@mui/icons-material';
 
 const Sidebar = ({ selectedCategory, setSelectedCategory }) => (
     <Stack direction={`row`} sx={{overflow: 'auto', height:{ sx: 'auto', md: '95%'}, flexDirection:{ md: 'column'}}}>
-        {
+        { /* map over the categories array to get each category for the sidebar to display. Categories is an array of objects. */
             categories.map((cate)=>(
                 <button key={cate.name} className='category-btn' onClick={()=>setSelectedCategory(cate.name)} style={{ background: cate.name===selectedCategory && 'red', color: 'white'}}>
                     <span style={{color: cate.name===selectedCategory ? 'white' : 'red', marginRight: '15px'}}>{cate.icon}</span>
